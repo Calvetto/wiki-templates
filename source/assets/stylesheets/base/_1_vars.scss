@@ -1,0 +1,29 @@
+// Colors
+
+$c_accent: #4EA650;
+$c_secondary: #e69138;
+$c_border: #CCC;
+$c_grey: #666;
+
+// Bacground colors
+
+$bg_base: #f2f2f2;
+
+// Font Families
+
+$f_titular: 'Merriweather', serif;
+$f_general: 'Lato', serif;
+$f_serif: Georgia, serif;
+
+
+// Bourbon grid
+$fg-column: 132px;    // Column Width
+$fg-gutter: 0px;    // Gutter Width
+$fg-max-columns: 12; // Total Columns For Main Container
+$fg-max-w: $fg-max-columns * $fg-column + ($fg-max-columns - 1) * $fg-gutter; // 1148
+/*$fg-min-w: 1200px;*/
+
+// Define your breakpoints
+$small_desktop: 1240px;
+$tablet: 1024px;
+$mobile: 767px;

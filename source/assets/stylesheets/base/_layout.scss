@@ -1,0 +1,221 @@
+//
+// Layout and grid
+//
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+  // background-repeat:no-repeat;
+}
+body {
+  text-align: left;
+}
+.application {
+  width: 100%;
+  background-color: $bg_base;
+  display: table;
+  min-height: 500px;
+  text-align: left;
+}
+.header {
+  display: table-caption;
+  width: 100%;
+  height: 40px;
+  background-color: $c_accent;
+}
+.sidebar {
+  width: flex-grid(2);
+  display: table-cell;
+  margin: 0 -0.285em 0;
+  background-color: #222C31;
+  padding: 5px 0 5px 10px;
+  height: 100%;
+  text-align: left;
+  vertical-align: top;
+  ul,
+  li,
+  a {
+    color: white;
+  }
+  li {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    > a {
+      padding: 10px;
+      background: black;
+      width: 100%;
+      display: inline-block;
+    }
+    ul {
+      margin: 10px;
+      li {
+        background-color: #4A4A4A;
+        padding: 5px 10px;
+        cursor: pointer;
+        a {
+          padding: 0;
+          background: none;
+        }
+      }
+    }
+  }
+}
+.content {
+  width: flex-grid(10);
+  display: table-cell;
+  margin: 0 -0.285em 0;
+  padding: 15px;
+  .description {
+    width: 80%;
+    display: inline-block;
+    margin: 0; padding: 20px;
+    .title {
+      color: $c_accent;
+      font: 700 26px/32px $f_titular;
+      display: inline-block;
+      margin: 0 0 20px 0;
+    }
+    .wrapper-def {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      &.circle {
+        > p {
+          position: absolute;
+          left: 0; top: 20%;
+          display: block;
+          border-radius: 50%;
+          text-align: center;
+          width: 65px; height: 65px;
+          padding: 22px 0;
+          font: 700 18px/22px $f_titular;
+          color: white;
+        }
+      }
+      &.orange {
+        > p {
+          background: $c_secondary;
+        }
+      }
+      &.green {
+        > p {
+          background: $c_accent;
+        }
+      }
+    }
+    .definition-space {
+      width: auto;
+      display: inline-block;
+      margin: 0 auto; padding: 30px 0;
+      color: $c_accent;
+      p {
+        font: 700 19px/20px $f_titular;
+        width: 100%;
+        margin: 0 10px; padding: 0;
+        display: block;
+        text-align: center;
+      }
+      &.substrac {
+        p {
+          &:last-child {
+            &:before {
+              content: " ";
+              margin: 3px 0; padding: 0;
+              width: 100%; height: 1px;
+              background: $c_accent;
+              display: block;
+            }
+          }
+        }
+      }
+      &.percentage {
+        position: relative;
+        padding-left: 50px;
+        &:after {
+          content: '%';
+          position: absolute;
+          left: 0; top: 30%;
+          font: 700 40px/40px $f_titular;
+        }
+      }
+    }
+    .info {
+      display: inline-block;
+      width: 100%;
+      margin: 40px 0 0 -35px;
+      dt {
+        display: inline-block;
+        margin: 0 -0.285em 45px 0; padding: 0 25px;
+        text-align: center;
+        font: 300 15px/18px $f_general;
+        width: 150px;
+        vertical-align: middle;
+        position: relative;
+        border-bottom: 2px solid $c_accent;
+        color: $c_grey;
+        &:after {
+          content: " ";
+          position: absolute;
+          right: 0; bottom: -11px;
+          margin: 0;
+          width: 20px; height: 20px;
+          border: 2px solid $c_accent; border-radius: 50%;
+          background: white;
+        }
+      }
+      dd {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 -0.285em 40px 0; padding-left: 20px;
+        width: calc( 100% - 150px);
+        font: 300 17px/20px $f_general;
+        color: black;
+      }
+    }
+  }
+}
+@include media($mobile) {
+  .sidebar {
+    display:none;
+  }
+  .content {
+    .description {
+      width: 100%;
+      padding: 0;
+      .title {
+        margin: 0;
+        font-size: 22px;
+      }
+      .wrapper-def {
+        padding-top: 90px; margin-top: 10px;
+        &.circle {
+          > p {
+            top: 10px; left: 40%;
+          }
+        }
+      }
+      .definition-space {
+        padding-top: 10px;
+        p {
+          margin: 0;
+        }
+        &.percentage {
+          &:after {
+            top: 15%; left: -5px;
+          }
+        }
+      }
+      .info {
+        width: calc(100% + 35px);
+        dt {
+          display: block;
+          margin: 0 0 20px 0;
+        }
+        dd {
+          width: 100%;
+          padding: 0 0 0 40px; margin: 0 0 20px 0;
+        }
+      }
+    }
+  }
+}

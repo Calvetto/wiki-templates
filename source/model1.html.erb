@@ -1,0 +1,49 @@
+---
+title: "Wikitemplates"
+---
+
+<div class="application">
+  <div class="header">
+
+  </div>
+  <div class="sidebar">
+    <ul>
+      <li><a href="#">Maarketing</a></li>
+      <li><a href="#">Ejecutivo</a></li>
+      <li>
+        <a href="index.html">Wiki</a>
+        <ul>
+          <% 3.times do |num| %>
+            <li><a href="model<%= num %>.html">Kpis <%= num %></a></li>
+          <% end %>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="description">
+      <p class="title">AOV de productos añadidos a la cesta</p>
+      <div class="wrapper-def circle green">
+        <p>
+          #3
+        </p>
+        <div class="definition-space substrac">
+          <p>
+            Valor de productos añadidos
+          </p>
+          <p>
+            Total de productos añadidos
+          </p>
+        </div>
+      </div>
+      <dl class="info">
+          <dt>Descripción</dt>
+          <dd>Valor medio de los productos añadidos a la cesta 3º nivel.</dd>
+          <dt>Visualización</dt>
+          <dd>KPI</dd>
+          <dt>Accionabilidad</dt>
+          <dd>Permite tener una visión de cuánto está dispuesto a gastarse el usuario de media por pedido, de su intención a la compra que tiene en un primer momento. Una disparidad alta entre este ratio y el pedido medio real puede deberse a falta de información, costes adicionales (envío) elevados o a nivel promocional no estamos impactando todo lo que debiéramos </dd>
+      </dl>
+    </div>
+  </div>
+</div>

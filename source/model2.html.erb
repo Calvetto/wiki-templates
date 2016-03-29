@@ -1,0 +1,49 @@
+---
+title: "Wikitemplates"
+---
+
+<div class="application">
+  <div class="header">
+
+  </div>
+  <div class="sidebar">
+    <ul>
+      <li><a href="#">Maarketing</a></li>
+      <li><a href="#">Ejecutivo</a></li>
+      <li>
+        <a href="index.html">Wiki</a>
+        <ul>
+          <% 3.times do |num| %>
+            <li><a href="model<%= num %>.html">Kpis <%= num %></a></li>
+          <% end %>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="description">
+      <p class="title">[TITULO]</p>
+      <div class="wrapper-def circle orange">
+        <p>
+          [NUM]
+        </p>
+        <div class="definition-space substrac percentage">
+          <p>
+            [FIRST]
+          </p>
+          <p>
+            [SECOND]
+          </p>
+        </div>
+      </div>
+      <dl class="info">
+          <dt>Descripción</dt>
+          <dd>[DESC]</dd>
+          <dt>Visualización</dt>
+          <dd>[ViSUAL]</dd>
+          <dt>Accionabilidad</dt>
+          <dd>[ACC]</dd>
+      </dl>
+    </div>
+  </div>
+</div>

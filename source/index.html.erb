@@ -1,0 +1,49 @@
+---
+title: "Wikitemplates"
+---
+
+<div class="application">
+  <div class="header">
+
+  </div>
+  <div class="sidebar">
+    <ul>
+      <li><a href="#">Maarketing</a></li>
+      <li><a href="#">Ejecutivo</a></li>
+      <li>
+        <a href="index.html">Wiki</a>
+        <ul>
+          <% 3.times do |num| %>
+            <li><a href="model<%= num %>.html">Kpis <%= num %></a></li>
+          <% end %>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="description">
+      <p class="title">Porcentaje de páginas vistas de portada 1º nivel generadas por navegación interna</p>
+      <div class="wrapper-def circle orange">
+        <p>
+          #1
+        </p>
+        <div class="definition-space substrac percentage">
+          <p>
+            <i>Entrances</i> a la portada
+          </p>
+          <p>
+            Páginas vistas totales de la portada
+          </p>
+        </div>
+      </div>
+      <dl class="info">
+          <dt>Descripción</dt>
+          <dd>Donde Entrances (entradas) <strong>representa el</strong> número de visitas a la portada directas de los canales de tráfico, es decir, que no procedan de la navegación interna</dd>
+          <dt>Visualización</dt>
+          <dd>Se representará mediante una un gráfico evolutivo con su correspondiente línea de tendencia</dd>
+          <dt>Accionabilidad</dt>
+          <dd>Un incremento por encima de la media podría interpretarse que el engagement de la tienda fuera de ECI es mayor y hay un mayor interés por comprar directamente en la categoría. Un descenso podría indicarnos una potencial pérdida en el caso de algunos canales o la predilección de entrada por la home de eci.</dd>
+      </dl>
+    </div>
+  </div>
+</div>
